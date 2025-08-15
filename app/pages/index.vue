@@ -22,5 +22,6 @@ async function greet() {
       <button type="submit">Greet</button>
     </form>
     <p>{{ greetMsg }}</p>
+    <div class="font-pingfang w-fit text-2xl tracking-normal">会话管理</div>
   </main>
 </template>

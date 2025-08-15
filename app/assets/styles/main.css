@@ -1,1 +1,6 @@
 @import "tailwindcss";
+
+@theme {
+  --font-pingfang: "PingFang SC", sans-serif;
+  --font-ibm-plex-sans-hebrew: "IBM Plex Sans Hebrew", sans-serif;
+}

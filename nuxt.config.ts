@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // Enable SSG
   ssr: false,
-  modules: ["reka-ui/nuxt"],
+  modules: ["reka-ui/nuxt", "@nuxt/fonts"],
   css: ["~/assets/styles/main.css"],
   vite: {
     plugins: [tailwindcss()],
@@ -27,4 +27,22 @@ export default defineNuxtConfig({
   },
   // Avoids error [unhandledRejection] EMFILE: too many open files, watch
   ignore: ["**/src-tauri/**"],
+
+  fonts: {
+    provider: "local",
+    families: [
+      {
+        name: "PingFang SC",
+        src: "/fonts/PingFangSC-Regular.woff2",
+        provider: "local",
+        weight: "400",
+      },
+      {
+        name: "IBM Plex Sans Hebrew",
+        src: "/fonts/IBMPlexSansHebrew-Bold.woff2",
+        provider: "local",
+        weight: "700",
+      },
+    ],
+  },
 })
