@@ -23,5 +23,10 @@ async function greet() {
     </form>
     <p>{{ greetMsg }}</p>
     <div class="font-pingfang w-fit text-2xl tracking-normal">会话管理</div>
+    <div
+      class="flex size-10 items-center justify-center rounded-lg bg-gradient-to-b from-[#494949] to-black shadow-lg"
+    >
+      <Icon name="zsim:zsim" class="size-8" />
+    </div>
   </main>
 </template>

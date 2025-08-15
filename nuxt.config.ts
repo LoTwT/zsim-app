@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // Enable SSG
   ssr: false,
-  modules: ["reka-ui/nuxt", "@nuxt/fonts"],
+  modules: ["reka-ui/nuxt", "@nuxt/fonts", "@nuxt/icon"],
   css: ["~/assets/styles/main.css"],
   vite: {
     plugins: [tailwindcss()],
@@ -42,6 +42,16 @@ export default defineNuxtConfig({
         src: "/fonts/IBMPlexSansHebrew-Bold.woff2",
         provider: "local",
         weight: "700",
+      },
+    ],
+  },
+
+  icon: {
+    provider: "none",
+    customCollections: [
+      {
+        prefix: "zsim",
+        dir: "./app/assets/svgs",
       },
     ],
   },
