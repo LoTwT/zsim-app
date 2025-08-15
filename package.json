@@ -1,0 +1,48 @@
+{
+  "name": "zsim-app",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "tauri": "tauri",
+    "prepare": "simple-git-hooks",
+    "up": "taze latest -I -f",
+    "prettier": "prettier --write .",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@tauri-apps/api": "^2.7.0",
+    "@tauri-apps/plugin-opener": "^2.4.0",
+    "nuxt": "^4.0.3",
+    "reka-ui": "^2.4.1",
+    "vue": "^3.5.18"
+  },
+  "devDependencies": {
+    "@ayingott/eslint-config": "^2.0.6",
+    "@ayingott/prettier-config": "^2.1.6",
+    "@tailwindcss/vite": "^4.1.12",
+    "@tauri-apps/cli": "^2.7.1",
+    "eslint": "^9.33.0",
+    "lint-staged": "^16.1.5",
+    "prettier": "^3.6.2",
+    "simple-git-hooks": "^2.13.1",
+    "tailwindcss": "^4.1.12",
+    "taze": "^19.1.0",
+    "vue-router": "latest"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged"
+  },
+  "lint-staged": {
+    "*": [
+      "eslint --fix",
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "prettier": "@ayingott/prettier-config"
+}
