@@ -28,6 +28,13 @@ export default defineNuxtConfig({
   // Avoids error [unhandledRejection] EMFILE: too many open files, watch
   ignore: ["**/src-tauri/**"],
 
+  components: [
+    {
+      path: "~/components",
+      pathPrefix: false,
+    },
+  ],
+
   fonts: {
     provider: "local",
     families: [
@@ -37,11 +44,12 @@ export default defineNuxtConfig({
         provider: "local",
         weight: "400",
       },
+      // https://github.com/ibm/plex
       {
         name: "IBM Plex Sans Hebrew",
-        src: "/fonts/IBMPlexSansHebrew-Bold.woff2",
+        src: "IBM Plex Sans Hebrew",
         provider: "local",
-        weight: "700",
+        weight: [300, 700],
       },
     ],
   },

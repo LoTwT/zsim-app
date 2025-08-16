@@ -4,3 +4,15 @@
   --font-pingfang: "PingFang SC", sans-serif;
   --font-ibm-plex-sans-hebrew: "IBM Plex Sans Hebrew", sans-serif;
 }
+
+@layer base {
+  html,
+  body,
+  #__nuxt {
+    @apply h-full w-full;
+  }
+
+  #__nuxt {
+    @apply bg-[#f1f1f1];
+  }
+}
