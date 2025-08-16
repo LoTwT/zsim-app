@@ -6,7 +6,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // Enable SSG
   ssr: false,
-  modules: ["reka-ui/nuxt", "@nuxt/fonts", "@nuxt/icon"],
+  modules: ["reka-ui/nuxt", "@nuxt/fonts", "@nuxt/icon", "@nuxtjs/i18n"],
   css: ["~/assets/styles/main.css"],
   vite: {
     plugins: [tailwindcss()],
@@ -40,9 +40,9 @@ export default defineNuxtConfig({
     families: [
       {
         name: "PingFang SC",
-        src: "/fonts/PingFangSC-Regular.woff2",
+        src: "PingFangSC",
         provider: "local",
-        weight: "400",
+        weight: [400, 500],
       },
       // https://github.com/ibm/plex
       {
@@ -61,6 +61,20 @@ export default defineNuxtConfig({
         prefix: "zsim",
         dir: "./app/assets/svgs",
       },
+    ],
+    clientBundle: {
+      // guard for uncompressed bundle size, will fail the build if exceeds
+      sizeLimitKb: 2048,
+    },
+  },
+
+  i18n: {
+    defaultLocale: "zh",
+    restructureDir: "app",
+    langDir: "./locales",
+    locales: [
+      { code: "zh", name: "中文", file: "zh.json" },
+      { code: "en", name: "English", file: "en.json" },
     ],
   },
 })
