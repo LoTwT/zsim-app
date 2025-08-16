@@ -1,5 +1,4 @@
-<script setup lang="ts"></script>
-
-<template>
-  <div>homepage</div>
-</template>
+<script setup>
+const localePath = useLocalePath()
+await navigateTo(localePath("session-management"))
+</script>
