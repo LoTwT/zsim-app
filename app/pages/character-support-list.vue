@@ -12,13 +12,16 @@ onMounted(async () => {
 })
 
 const heads = [
-  { key: "cid", label: t("cid") },
-  { key: locale.value === "zh_cn" ? "name" : "name_en", label: t("name") },
-  { key: "character_support", label: t("character_support") },
-  { key: "action_modeling", label: t("action_modeling") },
-  { key: "frame_counting", label: t("frame_counting") },
-  { key: "buff_support", label: t("buff_support") },
-  { key: "cinema_support", label: t("cinema_support") },
+  { key: "cid", label: t("character_support.cid") },
+  {
+    key: locale.value === "zh_cn" ? "name" : "name_en",
+    label: t("character_support.name"),
+  },
+  { key: "character_support", label: t("character_support.character_support") },
+  { key: "action_modeling", label: t("character_support.action_modeling") },
+  { key: "frame_counting", label: t("character_support.frame_counting") },
+  { key: "buff_support", label: t("character_support.buff_support") },
+  { key: "cinema_support", label: t("character_support.cinema_support") },
 ] as const
 </script>
 

@@ -1,18 +1,22 @@
 {
-  "session_management": "Session Management",
-  "character_configuration": "Character Configuration",
-  "simulator": "Simulator",
-  "data_analysis": "Data Analysis",
-  "apl_compiler": "APL Compiler",
-  "character_support_list": "Character Support List",
-  "apl_design_book": "APL Design Book",
-  "contribution_guide": "Contribution Guide",
-  "configuration": "Configuration",
-  "cid": "CID",
-  "name": "Name",
-  "character_support": "Character Support",
-  "action_modeling": "Action Modeling",
-  "frame_counting": "Frame Counting",
-  "buff_support": "Buff Support",
-  "cinema_support": "Cinema Support"
+  "sidebar": {
+    "session_management": "Session Management",
+    "character_configuration": "Character Configuration",
+    "simulator": "Simulator",
+    "data_analysis": "Data Analysis",
+    "apl_compiler": "APL Compiler",
+    "character_support_list": "Character Support List",
+    "apl_design_book": "APL Design Book",
+    "contribution_guide": "Contribution Guide",
+    "configuration": "Configuration"
+  },
+  "character_support": {
+    "cid": "CID",
+    "name": "Name",
+    "character_support": "Character Support",
+    "action_modeling": "Action Modeling",
+    "frame_counting": "Frame Counting",
+    "buff_support": "Buff Support",
+    "cinema_support": "Cinema Support"
+  }
 }

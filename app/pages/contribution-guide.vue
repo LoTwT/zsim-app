@@ -3,5 +3,5 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>{{ t("contribution_guide") }}</div>
+  <div>{{ t("sidebar.contribution_guide") }}</div>
 </template>

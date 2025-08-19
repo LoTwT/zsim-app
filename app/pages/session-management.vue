@@ -3,5 +3,5 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>{{ t("session_management") }}</div>
+  <div>{{ t("sidebar.session_management") }}</div>
 </template>

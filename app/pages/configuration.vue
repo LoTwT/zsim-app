@@ -3,5 +3,5 @@ const { t, setLocale } = useI18n()
 </script>
 
 <template>
-  <div @click="setLocale('zh_cn')">{{ t("configuration") }}</div>
+  <div @click="setLocale('zh_cn')">{{ t("sidebar.configuration") }}</div>
 </template>
