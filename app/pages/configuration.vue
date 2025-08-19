@@ -1,7 +1,7 @@
 <script setup lang="ts">
-const { t } = useI18n()
+const { t, setLocale } = useI18n()
 </script>
 
 <template>
-  <div>{{ t("configuration") }}</div>
+  <div @click="setLocale('zh_cn')">{{ t("configuration") }}</div>
 </template>

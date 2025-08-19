@@ -7,5 +7,12 @@
   "character_support_list": "角色支持列表",
   "apl_design_book": "APL设计书",
   "contribution_guide": "贡献指南",
-  "configuration": "配置"
+  "configuration": "配置",
+  "cid": "CID",
+  "name": "代理人",
+  "character_support": "角色支持度",
+  "action_modeling": "动作建模",
+  "frame_counting": "精细测帧",
+  "buff_support": "Buff支持",
+  "cinema_support": "影画支持"
 }

@@ -65,34 +65,42 @@ const navs = computed(() => [
 </script>
 
 <template>
-  <nav class="flex-1">
-    <div class="border-b-[0.5px] border-solid border-black/5 p-2">
-      <template v-for="nav in navs" :key="nav.name">
-        <div class="py-0.5">
-          <NuxtLink
-            :to="nav.to"
-            :class="
-              cn(
-                'flex items-center gap-x-2 rounded-lg border-1 border-transparent px-2.5 py-2.25',
-                'hover:bg-black/5',
-                'data-active-path:border-black/10 data-active-path:bg-white',
-              )
-            "
-            :data-active-path="baseRouteName === nav.name ? true : undefined"
-          >
-            <Icon
-              :name="nav.icon"
-              class="size-4 text-[#231E1CCC] data-active-path:text-[#FA7319]"
+  <ScrollAreaRoot as="nav" class="flex-1 overflow-hidden">
+    <ScrollAreaViewport class="h-full w-full">
+      <div class="border-b-[0.5px] border-solid border-black/5 p-2">
+        <template v-for="nav in navs" :key="nav.name">
+          <div class="py-0.5">
+            <NuxtLink
+              :to="nav.to"
+              :class="
+                cn(
+                  'flex items-center gap-x-2 rounded-lg border-1 border-transparent px-2.5 py-2.25',
+                  'hover:bg-black/5',
+                  'data-active-path:border-black/10 data-active-path:bg-white',
+                )
+              "
               :data-active-path="baseRouteName === nav.name ? true : undefined"
-            />
-            <div
-              class="font-pingfang text-sm/5 font-medium tracking-normal text-[#231E1CCC]"
             >
-              {{ nav.title }}
-            </div>
-          </NuxtLink>
-        </div>
-      </template>
-    </div>
-  </nav>
+              <Icon
+                :name="nav.icon"
+                class="size-4 text-[#231E1CCC] data-active-path:text-[#FA7319]"
+                :data-active-path="
+                  baseRouteName === nav.name ? true : undefined
+                "
+              />
+              <div
+                class="font-pingfang text-sm/5 font-medium tracking-normal text-[#231E1CCC]"
+              >
+                {{ nav.title }}
+              </div>
+            </NuxtLink>
+          </div>
+        </template>
+      </div>
+    </ScrollAreaViewport>
+
+    <ScrollAreaScrollbar orientation="vertical">
+      <ScrollAreaThumb />
+    </ScrollAreaScrollbar>
+  </ScrollAreaRoot>
 </template>
