@@ -19,6 +19,7 @@
   "dependencies": {
     "@nuxt/fonts": "0.11.4",
     "@nuxt/icon": "2.0.0",
+    "@nuxt/ui": "^3.3.2",
     "@nuxtjs/i18n": "10.0.5",
     "@tauri-apps/api": "^2.7.0",
     "@tauri-apps/plugin-opener": "^2.4.0",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@ayingott/eslint-config": "^2.0.6",
     "@ayingott/prettier-config": "^2.1.6",
+    "@iconify-json/lucide": "^1.2.63",
     "@tailwindcss/vite": "^4.1.12",
     "@tauri-apps/cli": "^2.7.1",
     "eslint": "^9.33.0",

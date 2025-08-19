@@ -6,7 +6,13 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   // Enable SSG
   ssr: false,
-  modules: ["reka-ui/nuxt", "@nuxt/fonts", "@nuxt/icon", "@nuxtjs/i18n"],
+  modules: [
+    "reka-ui/nuxt",
+    "@nuxt/fonts",
+    "@nuxt/icon",
+    "@nuxt/ui",
+    "@nuxtjs/i18n",
+  ],
   css: ["~/assets/styles/main.css"],
   vite: {
     plugins: [tailwindcss()],
