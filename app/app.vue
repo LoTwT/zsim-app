@@ -1,17 +1,12 @@
 <script setup lang="ts">
 import * as locales from "@nuxt/ui/locale"
 
-const { locale, messages } = useI18n()
-
-const extendedLocale = extendLocale(locales[locale.value], {
-  code: locale.value,
-  messages: messages.value[locale.value] || {},
-})
+const { locale } = useI18n()
 </script>
 
 <template>
   <NuxtLoadingIndicator />
-  <UApp :locale="extendedLocale">
+  <UApp :locale="locales[locale]">
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>

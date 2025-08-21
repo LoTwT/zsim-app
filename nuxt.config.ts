@@ -61,7 +61,7 @@ export default defineNuxtConfig({
   },
 
   icon: {
-    provider: "none",
+    // provider: "none",
     customCollections: [
       {
         prefix: "zsim",

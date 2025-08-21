@@ -18,5 +18,8 @@
     "frame_counting": "Frame Counting",
     "buff_support": "Buff Support",
     "cinema_support": "Cinema Support"
+  },
+  "configuration": {
+    "language_switch": "Language Switch"
   }
 }

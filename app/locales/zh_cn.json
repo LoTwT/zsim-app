@@ -18,5 +18,8 @@
     "frame_counting": "精细测帧",
     "buff_support": "Buff支持",
     "cinema_support": "影画支持"
+  },
+  "configuration": {
+    "language_switch": "语言切换"
   }
 }
