@@ -5,7 +5,7 @@
     <div
       :class="
         cn(
-          'h-full w-full flex-1 rounded-lg p-6 shadow-xl',
+          'h-full w-full rounded-lg p-6 shadow-xl',
           'border-default border border-solid',
         )
       "

@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/ui",
     "@nuxtjs/i18n",
+    "@nuxt/content",
   ],
   css: ["~/assets/styles/main.css"],
   vite: {
