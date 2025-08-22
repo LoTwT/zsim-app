@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import "tailwindcss" theme(static);
 @import "@nuxt/ui";
 
 @theme {
@@ -11,9 +11,5 @@
   body,
   #__nuxt {
     @apply h-full w-full;
-  }
-
-  #__nuxt {
-    @apply bg-[#f1f1f1];
   }
 }

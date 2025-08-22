@@ -20,6 +20,7 @@
     "cinema_support": "影画支持"
   },
   "configuration": {
-    "language_switch": "语言切换"
+    "language_switch": "语言切换",
+    "theme_switch": "主题切换"
   }
 }

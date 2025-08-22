@@ -20,6 +20,7 @@
     "cinema_support": "Cinema Support"
   },
   "configuration": {
-    "language_switch": "Language Switch"
+    "language_switch": "Language Switch",
+    "theme_switch": "Theme Switch"
   }
 }

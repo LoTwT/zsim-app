@@ -76,21 +76,19 @@ const navs = computed(() => [
                 cn(
                   'flex items-center gap-x-2 rounded-lg border-1 border-transparent px-2.5 py-2.25',
                   'hover:bg-black/5',
-                  'data-active-path:border-black/10 data-active-path:bg-white',
+                  'data-active-path:bg-accented data-active-path:border-default',
                 )
               "
               :data-active-path="baseRouteName === nav.name ? true : undefined"
             >
               <Icon
                 :name="nav.icon"
-                class="size-4 text-[#231E1CCC] data-active-path:text-[#FA7319]"
+                class="data-active-path:text-primary size-4"
                 :data-active-path="
                   baseRouteName === nav.name ? true : undefined
                 "
               />
-              <div
-                class="font-pingfang text-sm/5 font-medium tracking-normal text-[#231E1CCC]"
-              >
+              <div class="font-pingfang text-sm/5 font-medium tracking-normal">
                 {{ nav.title }}
               </div>
             </NuxtLink>

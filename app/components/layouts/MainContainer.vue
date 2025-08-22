@@ -5,8 +5,8 @@
     <div
       :class="
         cn(
-          'h-full w-full flex-1 rounded-lg bg-white p-6',
-          'border border-solid border-[#e6e6e6]',
+          'h-full w-full flex-1 rounded-lg p-6 shadow-xl',
+          'border-default border border-solid',
         )
       "
     >

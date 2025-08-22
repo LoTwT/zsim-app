@@ -10,13 +10,22 @@ const { t } = useI18n()
 
     <USeparator class="my-4" />
 
-    <div class="flex flex-col">
-      <div class="flex items-center gap-x-12">
-        <div class="font-pingfang min-w-40 text-lg">
+    <div class="flex flex-col gap-y-4">
+      <ConfigurationItem>
+        <template #label>
           {{ t("configuration.language_switch") }}
-        </div>
+        </template>
         <LanguageSwitch />
-      </div>
+      </ConfigurationItem>
+
+      <ConfigurationItem>
+        <template #label>
+          {{ t("configuration.theme_switch") }}
+        </template>
+        <ThemePicker />
+      </ConfigurationItem>
+
+      <div></div>
     </div>
   </div>
 </template>
