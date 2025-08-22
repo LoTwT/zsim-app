@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { TableColumn } from "@nuxt/ui"
 import type { CharacterSupport } from "~/apis/types"
+import { SupportDisplay } from "#components"
 import { getCharacterSupports } from "~/apis"
 
 const { locale, t } = useI18n()
@@ -24,29 +25,59 @@ const columns: TableColumn<CharacterSupport>[] = [
   {
     accessorKey: "character_support",
     header: t("character_support.character_support"),
+    cell: ({ row }) => {
+      const supportValue = row.getValue("character_support") as number
+      return h(SupportDisplay, { supportValue })
+    },
   },
   {
     accessorKey: "action_modeling",
     header: t("character_support.action_modeling"),
+    cell: ({ row }) => {
+      const supportValue = row.getValue("action_modeling") as number
+      return h(SupportDisplay, { supportValue })
+    },
   },
   {
     accessorKey: "frame_counting",
     header: t("character_support.frame_counting"),
+    cell: ({ row }) => {
+      const supportValue = row.getValue("frame_counting") as number
+      return h(SupportDisplay, { supportValue })
+    },
   },
-  { accessorKey: "buff_support", header: t("character_support.buff_support") },
+  {
+    accessorKey: "buff_support",
+    header: t("character_support.buff_support"),
+    cell: ({ row }) => {
+      const supportValue = row.getValue("buff_support") as number
+      return h(SupportDisplay, { supportValue })
+    },
+  },
   {
     accessorKey: "cinema_support",
     header: t("character_support.cinema_support"),
+    cell: ({ row }) => {
+      const supportValue = row.getValue("cinema_support") as number
+      return h(SupportDisplay, { supportValue })
+    },
   },
 ]
 </script>
 
 <template>
-  <UTable
-    class="h-full w-full"
-    :data="characterSupports"
-    :columns="columns"
-    :loading="isLoading"
-    sticky
-  />
+  <MainContentBase>
+    <template #title>
+      {{ t("sidebar.character_support_list") }}
+    </template>
+
+    <UTable
+      class="h-full w-full"
+      :data="characterSupports"
+      :columns="columns"
+      :loading="isLoading"
+      sticky
+    >
+    </UTable>
+  </MainContentBase>
 </template>

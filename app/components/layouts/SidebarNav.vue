@@ -75,7 +75,7 @@ const navs = computed(() => [
               :class="
                 cn(
                   'flex items-center gap-x-2 rounded-lg border-1 border-transparent px-2.5 py-2.25',
-                  'hover:bg-black/5',
+                  'hover:bg-elevated',
                   'data-active-path:bg-accented data-active-path:border-default',
                 )
               "

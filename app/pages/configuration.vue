@@ -3,12 +3,10 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <div>
-    <div class="font-pingfang text-2xl/8.5">
+  <MainContentBase>
+    <template #title>
       {{ t("sidebar.configuration") }}
-    </div>
-
-    <USeparator class="my-4" />
+    </template>
 
     <div class="flex flex-col gap-y-4">
       <ConfigurationItem>
@@ -24,8 +22,6 @@ const { t } = useI18n()
         </template>
         <ThemePicker />
       </ConfigurationItem>
-
-      <div></div>
     </div>
-  </div>
+  </MainContentBase>
 </template>
