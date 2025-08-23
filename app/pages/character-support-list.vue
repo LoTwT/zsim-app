@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { TableColumn } from "@nuxt/ui"
 import type { CharacterSupport } from "~/apis/types"
-import { SupportDisplay } from "#components"
+import { CharacterSupportAbout, SupportDisplay } from "#components"
 
 const { locale, t } = useI18n()
 
@@ -62,13 +62,17 @@ const columns = computed<TableColumn<CharacterSupport>[]>(() => [
       {{ t("sidebar.character_support_list") }}
     </template>
 
-    <UTable
-      class="h-full w-full"
-      :data="characterSupports"
-      :columns="columns"
-      :loading="isLoading"
-      sticky
-    >
-    </UTable>
+    <div class="flex h-full flex-col gap-y-8">
+      <UTable
+        class="border-default h-full w-full border"
+        :data="characterSupports"
+        :columns="columns"
+        :loading="isLoading"
+        sticky
+      >
+      </UTable>
+
+      <CharacterSupportAbout />
+    </div>
   </MainContentBase>
 </template>

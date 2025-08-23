@@ -20,7 +20,8 @@
     "cinema_support": "Cinema Support",
     "fully_support": "Fully Support",
     "partially_support": "Partially Support",
-    "not_support": "Not Support"
+    "not_support": "Not Support",
+    "about": "About"
   },
   "configuration": {
     "language_switch": "Language Switch",

@@ -18,5 +18,10 @@ export default defineAppConfig({
       dark: "i-lucide:moon",
       system: "i-lucide:monitor",
     },
+    button: {
+      slots: {
+        base: "cursor-pointer",
+      },
+    },
   },
 })

@@ -20,7 +20,8 @@
     "cinema_support": "影画支持",
     "fully_support": "完全支持",
     "partially_support": "不完全支持",
-    "not_support": "不支持"
+    "not_support": "不支持",
+    "about": "关于"
   },
   "configuration": {
     "language_switch": "语言切换",
