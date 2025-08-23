@@ -1,0 +1,1 @@
+export { useCharacterSupports } from "./useCharacterSupports"

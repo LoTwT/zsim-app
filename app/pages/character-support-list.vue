@@ -2,21 +2,12 @@
 import type { TableColumn } from "@nuxt/ui"
 import type { CharacterSupport } from "~/apis/types"
 import { SupportDisplay } from "#components"
-import { getCharacterSupports } from "~/apis"
 
 const { locale, t } = useI18n()
 
-const characterSupports = ref<CharacterSupport[]>([])
-const isLoading = ref(false)
+const { data: characterSupports, pending: isLoading } = useCharacterSupports()
 
-onMounted(async () => {
-  isLoading.value = true
-  const response = await getCharacterSupports()
-  characterSupports.value = response.character_supports
-  isLoading.value = false
-})
-
-const columns: TableColumn<CharacterSupport>[] = [
+const columns = computed<TableColumn<CharacterSupport>[]>(() => [
   { accessorKey: "cid", header: t("character_support.cid") },
   {
     accessorKey: locale.value === "zh_cn" ? "name" : "name_en",
@@ -62,7 +53,7 @@ const columns: TableColumn<CharacterSupport>[] = [
       return h(SupportDisplay, { supportValue })
     },
   },
-]
+])
 </script>
 
 <template>
