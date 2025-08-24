@@ -3,5 +3,6 @@ onlyBuiltDependencies:
   - "@tailwindcss/oxide"
   - better-sqlite3
   - esbuild
+  - sharp
   - simple-git-hooks
   - vue-demi

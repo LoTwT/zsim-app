@@ -1,16 +1,50 @@
 use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub enum Rank {
+    S,
+    A,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Element {
+    Electric,
+    Physical,
+    Fire,
+    Ice,
+    Ether,
+    Frost,
+    #[serde(rename = "auric-ink")]
+    AuricInk,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum Weapon {
+    Attack,
+    Defense,
+    Support,
+    Stun,
+    Anomaly,
+    Rupture,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct Character {
     pub id: u32,
     pub name: String,
     pub name_en: String,
     pub name_full: String,
     pub name_short: String,
-    pub rank: String,
-    pub element: u32,
+    pub rank: Rank,
     pub speciality: u32,
     pub icon: Vec<String>,
+    pub rank_img: String,
+    pub element_img: String,
+    pub element: Element,
+    pub weapon_img: String,
+    pub weapon: Weapon,
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
