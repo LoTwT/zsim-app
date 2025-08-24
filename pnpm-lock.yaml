@@ -54,6 +54,9 @@ importers:
       '@ayingott/prettier-config':
         specifier: ^2.1.6
         version: 2.1.6(prettier@3.6.2)
+      '@iconify-json/bx':
+        specifier: ^1.2.2
+        version: 1.2.2
       '@iconify-json/lucide':
         specifier: ^1.2.63
         version: 1.2.63
@@ -750,6 +753,9 @@ packages:
   '@humanwhocodes/retry@0.4.3':
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
+
+  '@iconify-json/bx@1.2.2':
+    resolution: {integrity: sha512-hZVx6LMEkYckScdRdUuQWcmv8Lm2au6Cnf799TLoR6YgiAfFvaJ4M5ElwcnExvCu8ntsS7jW89r0W5LwBAfZXQ==}
 
   '@iconify-json/lucide@1.2.63':
     resolution: {integrity: sha512-4rRKhUhEh4TsBq5ypbimHbBA6ApIcDLR9gzjnJT2cvUn2+rG+oG4TPXgHLFmIaRkHKYcMKukdcfOUaJbM/G4pQ==}
@@ -7139,6 +7145,10 @@ snapshots:
   '@humanwhocodes/retry@0.3.1': {}
 
   '@humanwhocodes/retry@0.4.3': {}
+
+  '@iconify-json/bx@1.2.2':
+    dependencies:
+      '@iconify/types': 2.0.0
 
   '@iconify-json/lucide@1.2.63':
     dependencies:

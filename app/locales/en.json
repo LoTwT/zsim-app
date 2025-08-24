@@ -26,5 +26,14 @@
   "configuration": {
     "language_switch": "Language Switch",
     "theme_switch": "Theme Switch"
+  },
+  "session_management": {
+    "carries": "Carries",
+    "supports": "Supports",
+    "stuns": "Stuns",
+    "bosses": "Bosses",
+    "recently_created": "Recently Created",
+    "filter": "Filter",
+    "create_session": "Create Session"
   }
 }

@@ -26,5 +26,14 @@
   "configuration": {
     "language_switch": "语言切换",
     "theme_switch": "主题切换"
+  },
+  "session_management": {
+    "carries": "主 C 列表",
+    "supports": "辅助列表",
+    "stuns": "击破列表",
+    "bosses": "BOSS 列表",
+    "recently_created": "最近创建",
+    "filter": "筛选",
+    "create_session": "创建会话"
   }
 }
