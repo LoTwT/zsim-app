@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "build": "nuxt build",
-    "build:windows": "tauri build --target aarch64-pc-windows-msvc",
+    "build:windows": "tauri build --runner cargo-xwin --target x86_64-pc-windows-msvc",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
