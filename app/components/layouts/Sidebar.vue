@@ -12,7 +12,7 @@
           )
         "
       >
-        <Icon name="zsim:zsim" class="size-8" />
+        <Icon name="zsim-zsim" class="size-8" />
       </div>
 
       <div class="flex items-end gap-x-2">
@@ -39,7 +39,7 @@
 
     <!-- User -->
     <div class="flex items-center gap-x-1 px-4 pt-4 pb-6">
-      <Icon name="zsim:eous" class="size-6" />
+      <Icon name="zsim-eous" class="size-6" />
       <div class="font-pingfang text-xs">Eous</div>
     </div>
   </aside>
