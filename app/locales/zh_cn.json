@@ -39,6 +39,11 @@
     "crit_dmg": "暴伤",
     "sheer_force": "贯穿",
     "pen_ratio": "穿透",
-    "ether": "以太"
+    "ether": "以太",
+    "create_session_search_placeholder": "搜索并选择已有的配队方案",
+    "create_session_team_configuration": "配队设置",
+    "create_session_save_as_template": "保存为模板",
+    "create_session_reset": "重置",
+    "create_session_start_simulation": "开始模拟"
   }
 }

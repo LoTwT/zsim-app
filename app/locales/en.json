@@ -39,6 +39,11 @@
     "crit_dmg": "CRIT Damage",
     "sheer_force": "Sheer Force",
     "pen_ratio": "PEN Ratio",
-    "ether": "Ether"
+    "ether": "Ether",
+    "create_session_search_placeholder": "Search and select existing team-up plans",
+    "create_session_team_configuration": "Team Configuration",
+    "create_session_save_as_template": "Save as template",
+    "create_session_reset": "Reset",
+    "create_session_start_simulation": "Start Simulation"
   }
 }

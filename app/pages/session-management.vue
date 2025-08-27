@@ -111,16 +111,7 @@ async function openGithub() {
           >
             {{ t("session_management.filter") }}
           </UButton>
-          <UButton
-            icon="zsim-plus"
-            class="shrink-0 gap-x-1 px-3"
-            :ui="{
-              leadingIcon: 'size-3',
-              label: 'font-pingfang text-sm/5 tracking-normal',
-            }"
-          >
-            {{ t("session_management.create_session") }}
-          </UButton>
+          <SessionManagementCreateSession />
         </div>
       </template>
 
