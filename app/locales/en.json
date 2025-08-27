@@ -34,6 +34,11 @@
     "bosses": "Bosses",
     "recently_created": "Recently Created",
     "filter": "Filter",
-    "create_session": "Create Session"
+    "create_session": "Create Session",
+    "crit_rate": "CRIT Rate",
+    "crit_dmg": "CRIT Damage",
+    "sheer_force": "Sheer Force",
+    "pen_ratio": "PEN Ratio",
+    "ether": "Ether"
   }
 }

@@ -11,7 +11,15 @@ import { openUrl } from "@tauri-apps/plugin-opener"
 
 const { t } = useI18n()
 
-// const { data: characters } = useCharacters()
+const { data: characters } = useCharacters()
+
+const mockedCharacters = computed(
+  () =>
+    characters.value?.filter(
+      (character) =>
+        character.id === 1371 || character.id === 1421 || character.id === 1391,
+    ) || [],
+)
 
 const items = ref<TabsItem[]>([
   {
@@ -86,15 +94,16 @@ async function openGithub() {
         label: 'font-pingfang text-base/5.5 tracking-normal',
         leadingIcon: 'size-4',
         content: 'flex-1 overflow-hidden',
+        list: 'overflow-x-auto overflow-y-hidden',
       }"
     >
       <template #list-trailing>
-        <div class="flex w-full items-center justify-end gap-x-3">
+        <div class="relative flex w-full items-center justify-end gap-x-3">
           <UButton
             variant="outline"
             color="neutral"
             icon="zsim-filter"
-            class="gap-x-1 px-3"
+            class="shrink-0 gap-x-1 px-3"
             :ui="{
               leadingIcon: 'size-3',
               label: 'font-pingfang text-sm/5 tracking-normal',
@@ -104,7 +113,7 @@ async function openGithub() {
           </UButton>
           <UButton
             icon="zsim-plus"
-            class="gap-x-1 px-3"
+            class="shrink-0 gap-x-1 px-3"
             :ui="{
               leadingIcon: 'size-3',
               label: 'font-pingfang text-sm/5 tracking-normal',
@@ -119,7 +128,11 @@ async function openGithub() {
         <ScrollAreaRoot class="relative h-full w-full overflow-hidden">
           <ScrollAreaViewport class="h-full w-full">
             <KeepAlive>
-              <component :is="item.component" :key="item.value" />
+              <component
+                :is="item.component"
+                :key="item.value"
+                :characters="mockedCharacters"
+              />
             </KeepAlive>
           </ScrollAreaViewport>
 

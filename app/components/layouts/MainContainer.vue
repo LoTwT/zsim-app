@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <main class="h-full w-full py-4 pr-4">
+  <main class="h-full w-[calc(100%-14rem)] py-4 pr-4">
     <div
       :class="
         cn(

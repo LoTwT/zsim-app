@@ -50,14 +50,14 @@ export default defineNuxtConfig({
         name: "PingFang SC",
         src: "PingFangSC",
         provider: "local",
-        weight: [400, 500],
+        weights: [400, 500, 600],
       },
       // https://github.com/ibm/plex
       {
         name: "IBM Plex Sans Hebrew",
         src: "IBM Plex Sans Hebrew",
         provider: "local",
-        weight: [300, 700],
+        weights: [300, 700],
       },
     ],
   },

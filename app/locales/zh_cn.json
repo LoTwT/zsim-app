@@ -34,6 +34,11 @@
     "bosses": "BOSS 列表",
     "recently_created": "最近创建",
     "filter": "筛选",
-    "create_session": "创建会话"
+    "create_session": "创建会话",
+    "crit_rate": "暴击",
+    "crit_dmg": "暴伤",
+    "sheer_force": "贯穿",
+    "pen_ratio": "穿透",
+    "ether": "以太"
   }
 }
