@@ -7,3 +7,7 @@ export async function getCharacters() {
 export async function getCharacterSupports() {
   return requestTauri("get_character_supports")
 }
+
+export async function getWEngines() {
+  return requestTauri("get_wengines")
+}

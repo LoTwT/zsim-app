@@ -1,9 +1,10 @@
-import type { Character, CharacterSupport } from "./types"
+import type { Character, CharacterSupport, WEngine } from "./types"
 import { invoke } from "@tauri-apps/api/core"
 
 export const TAURI_COMMANDS = {
   GET_CHARACTERS: "get_characters",
   GET_CHARACTER_SUPPORTS: "get_character_supports",
+  GET_WENGINES: "get_wengines",
 } as const
 
 export type TauriCommand = (typeof TAURI_COMMANDS)[keyof typeof TAURI_COMMANDS]
@@ -16,6 +17,10 @@ export interface TauriCommandDefinitions {
   [TAURI_COMMANDS.GET_CHARACTER_SUPPORTS]: {
     args: never
     response: { character_supports: CharacterSupport[] }
+  }
+  [TAURI_COMMANDS.GET_WENGINES]: {
+    args: never
+    response: { wengines: WEngine[] }
   }
 }
 

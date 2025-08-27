@@ -55,3 +55,12 @@ export interface CharacterSupport {
   cinema_support: number
   frame_counting: number
 }
+
+export interface WEngine {
+  id: number
+  name: string
+  name_en: string
+  description: string
+  icon: string
+  rank: string
+}

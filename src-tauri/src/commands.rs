@@ -1,7 +1,7 @@
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 use crate::models::{
     Character, CharacterSupportCSV, GetCharacterSupportsListResponse, GetCharacterSupportsResponse,
-    GetCharactersResponse,
+    GetCharactersResponse, WEngine, GetWEnginesResponse,
 };
 use csv;
 use reqwest;
@@ -9,6 +9,7 @@ use serde_json;
 use std::sync::OnceLock;
 
 static CHARACTERS_CACHE: OnceLock<Result<Vec<Character>, String>> = OnceLock::new();
+static WENGINES_CACHE: OnceLock<Result<Vec<WEngine>, String>> = OnceLock::new();
 
 fn get_cached_characters() -> Result<&'static Vec<Character>, String> {
     let res = CHARACTERS_CACHE.get_or_init(|| {
@@ -79,4 +80,20 @@ pub async fn get_character_supports() -> Result<GetCharacterSupportsListResponse
     }
 
     Ok(GetCharacterSupportsListResponse { character_supports })
+}
+
+fn get_cached_wengines() -> Result<&'static Vec<WEngine>, String> {
+    let res = WENGINES_CACHE.get_or_init(|| {
+        let json_str = include_str!("../assets/weapons.json");
+        serde_json::from_str::<Vec<WEngine>>(json_str)
+            .map_err(|e| format!("Failed to parse JSON: {e}"))
+    });
+    res.as_ref().map_err(|e| e.clone())
+}
+
+#[tauri::command]
+pub fn get_wengines() -> Result<GetWEnginesResponse, String> {
+    let wengines = get_cached_wengines()?.clone();
+    let response = GetWEnginesResponse { wengines };
+    Ok(response)
 }

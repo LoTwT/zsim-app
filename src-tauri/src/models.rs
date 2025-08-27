@@ -120,3 +120,18 @@ pub struct GetCharacterSupportsResponse {
 pub struct GetCharacterSupportsListResponse {
     pub character_supports: Vec<GetCharacterSupportsResponse>,
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct WEngine {
+    pub id: u32,
+    pub name: String,
+    pub name_en: String,
+    pub description: String,
+    pub icon: String,
+    pub rank: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct GetWEnginesResponse {
+    pub wengines: Vec<WEngine>,
+}

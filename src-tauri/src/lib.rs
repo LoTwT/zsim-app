@@ -10,6 +10,7 @@ pub fn run() {
         .invoke_handler(tauri::generate_handler![
             commands::get_characters,
             commands::get_character_supports,
+            commands::get_wengines,
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
