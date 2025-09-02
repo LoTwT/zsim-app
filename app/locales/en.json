@@ -1,4 +1,12 @@
 {
+  "common": {
+    "w_engine": "W Engine",
+    "4_pieces": "4 Pieces",
+    "2_pieces": "2 Pieces",
+    "skill_level": "Skill Level",
+    "cinema": "Cinema",
+    "apl": "APL"
+  },
   "sidebar": {
     "session_management": "Session Management",
     "character_configuration": "Character Configuration",
@@ -44,6 +52,8 @@
     "create_session_team_configuration": "Team Configuration",
     "create_session_save_as_template": "Save as template",
     "create_session_reset": "Reset",
-    "create_session_start_simulation": "Start Simulation"
+    "create_session_start_simulation": "Start Simulation",
+    "create_session_buff": "BUFF",
+    "create_session_bangboo": "BANGBOO"
   }
 }

@@ -13,12 +13,14 @@ const { t } = useI18n()
 
 const { data: characters } = useCharacters()
 
-const mockedCharacters = computed(
-  () =>
-    characters.value?.filter(
-      (character) =>
-        character.id === 1371 || character.id === 1421 || character.id === 1391,
-    ) || [],
+const mockedCharacters = computed(() =>
+  characters.value
+    ? [
+        characters.value?.find((character) => character.id === 1371),
+        characters.value?.find((character) => character.id === 1421),
+        characters.value?.find((character) => character.id === 1391),
+      ]
+    : [],
 )
 
 const items = ref<TabsItem[]>([

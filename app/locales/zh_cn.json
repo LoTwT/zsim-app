@@ -1,4 +1,12 @@
 {
+  "common": {
+    "w_engine": "音擎",
+    "4_pieces": "4 件套",
+    "2_pieces": "2 件套",
+    "skill_level": "技能等级",
+    "cinema": "影画",
+    "apl": "APL"
+  },
   "sidebar": {
     "session_management": "会话管理",
     "character_configuration": "角色配置",
@@ -44,6 +52,8 @@
     "create_session_team_configuration": "配队设置",
     "create_session_save_as_template": "保存为模板",
     "create_session_reset": "重置",
-    "create_session_start_simulation": "开始模拟"
+    "create_session_start_simulation": "开始模拟",
+    "create_session_buff": "危局 BUFF",
+    "create_session_bangboo": "邦布"
   }
 }
