@@ -13,7 +13,6 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxtjs/i18n",
     "@nuxt/content",
-    "@nuxt/image",
   ],
   css: ["~/assets/styles/main.css"],
   vite: {

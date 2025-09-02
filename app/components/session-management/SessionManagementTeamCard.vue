@@ -49,9 +49,7 @@ const { t } = useI18n()
 
     <div class="flex items-center gap-x-2">
       <div class="border-default w-16 rounded border">
-        <NuxtImg
-          src="/imgs/priest-placeholder-need-deleted-in-the-future.png"
-        />
+        <img src="/imgs/priest-placeholder-need-deleted-in-the-future.png" />
       </div>
       <div
         class="font-pingfang flex flex-1 flex-col gap-y-1 text-xs/3 tracking-normal"

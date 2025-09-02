@@ -84,7 +84,7 @@ const agentRenderData = computed(() =>
   <div
     class="border-default relative flex w-fit overflow-hidden rounded border"
   >
-    <NuxtImg
+    <img
       :src="agentRenderData.image"
       :width="agentRenderData.imageWidth"
       :height="agentRenderData.imageHeight"
@@ -93,14 +93,14 @@ const agentRenderData = computed(() =>
 
     <div :class="cn(AgentInfoVariants({ size }))">
       <div :class="cn(AgentElementVariants({ size }))">
-        <NuxtImg
+        <img
           :src="character.element_img"
           :width="agentRenderData.elementImageWidth"
           :height="agentRenderData.elementImageHeight"
         />
       </div>
       <div :class="cn(AgentWeaponVariants({ size }))">
-        <NuxtImg
+        <img
           :src="character.weapon_img"
           :width="agentRenderData.weaponImageWidth"
           :height="agentRenderData.weaponImageHeight"
